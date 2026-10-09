@@ -145,7 +145,7 @@ router.put(
 
       const { studentId, courseId, newCourseId } = result.data;
 
-      // Role ADMIN แก้ไขได้ทุกคน / Role STUDENT แก้ไขได้แค่ตัวเอง
+      // Role ADMIN แก้ไขได้ทุกคน, Role STUDENT แก้ไขได้แค่ตัวเอง
       if (user?.role === "STUDENT" && user.studentId !== studentId) {
         return res.status(403).json({
           success: false,
@@ -240,7 +240,7 @@ router.delete(
 
       const { studentId, courseId } = result.data;
 
-      // Role ADMIN ลบได้ทุกคน / Role STUDENT ลบได้แค่ของตัวเอง
+      // Role ADMIN ลบได้ทุกคน, Role STUDENT ลบได้แค่ของตัวเอง
       if (user?.role === "STUDENT" && user.studentId !== studentId) {
         return res.status(403).json({
           success: false,
