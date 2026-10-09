@@ -213,11 +213,11 @@ router.put(
       const updated = await prisma.student.update({
         where: { studentId },
         data: {
-          ...(firstName !== undefined && { firstName }),
-          ...(lastName !== undefined && { lastName }),
-          ...(program !== undefined && { program }),
-          ...(interests !== undefined && { interests }),
-          ...(emails !== undefined && { emails }),
+          ...(firstName ? { firstName } : {}),
+          ...(lastName ? { lastName } : {}),
+          ...(program ? { program } : {}),
+          ...(interests ? { interests } : {}),
+          ...(emails ? { emails } : {}),
         },
       });
 

@@ -1,6 +1,5 @@
 import { Router, type Request, type Response } from "express";
-import { zEnrollmentBody } from "../libs/zodValidators.ts";
-// ข้อ 3.1 import zEnrollmentPutBody
+// 3.1 import zEnrollmentPutBody
 import { zEnrollmentBody, zEnrollmentPutBody } from "../libs/zodValidators.ts";
 
 import type { CustomRequest } from "../libs/types.ts";
