@@ -44,7 +44,7 @@ export default function HomePage() {
       </Card>
 
       <p className="text-center text-xs text-muted-foreground">
-        จัดทำโดย ผู้สอน (Lecture)
+        จัดทำโดย นวพรรษ พร้อมพงษ์ รหัสนักศึกษา 680610688
       </p>
     </div>
   );
